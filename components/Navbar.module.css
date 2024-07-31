@@ -1,24 +1,57 @@
-
 /* components/Navbar.module.css */
 .navbar {
-    width: 1442px;
-    height: 57px;
-    gap: 0px;
-    opacity: 0px;
-    
+  width: 100%; /* Cambiar de un ancho fijo a un ancho del 100% para que se ajuste al ancho del contenedor */
+  max-width: 1440px; /* Opcional: establecer un ancho máximo para mantener el diseño centrado en pantallas grandes */
+  height: 57px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px; /* Espaciado lateral */
+  background-color: #f9f9f9; /* Color de fondo opcional */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opcional: sombra para destacar la barra */
+  box-sizing: border-box; /* Incluir padding y borde en el ancho total */
+  opacity: 1; /* Asegúrate de que la opacidad sea visible, cambiar a 1 */
+  transition: opacity 0.3s ease; /* Opcional: transición suave si cambias la opacidad */
+}
+
+.logo img {
+  height: 40px;
+  max-height: 100%; /* Asegura que la imagen no se estire fuera del contenedor */
+}
+
+/* Responsividad */
+
+/* Para pantallas medianas (tabletas en modo vertical) */
+@media (max-width: 992px) {
+  .navbar {
+    height: 55px; /* Ajustar la altura según sea necesario */
+    padding: 0 10px; /* Reducir el padding en pantallas más pequeñas */
   }
-  
+
   .logo img {
-    height: 40px;
+    height: 35px; /* Ajustar la altura de la imagen */
   }
-  
-  /* Responsividad */
-  @media (max-width: 768px) {
-    .navbar {
-      height: 50px;
-    }
-  
-    .logo img {
-      height: 30px;
-    }
+}
+
+/* Para pantallas pequeñas (teléfonos móviles) */
+@media (max-width: 768px) {
+  .navbar {
+    height: 50px;
+    padding: 0 5px; /* Reducir aún más el padding */
   }
+
+  .logo img {
+    height: 30px; /* Ajustar la altura de la imagen para pantallas móviles */
+  }
+}
+
+/* Para pantallas muy pequeñas (teléfonos móviles en modo retrato) */
+@media (max-width: 576px) {
+  .navbar {
+    height: 45px; /* Ajustar altura si es necesario */
+    padding: 0 5px; /* Mantener el padding reducido */
+  }
+
+  .logo img {
+    height: 25px; /* Ajustar la altura de la imagen para dispositivos muy pequeños */
+  }
+}

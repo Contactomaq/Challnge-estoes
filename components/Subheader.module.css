@@ -1,14 +1,17 @@
 /* components/Subheader.module.css */
 .subheader {
-  width: 1440px;
+  width: 100%; /* Cambiar de un ancho fijo a un ancho del 100% para que se ajuste al ancho del contenedor */
+  max-width: 1440px; /* Opcional: establecer un ancho máximo para centrar el diseño en pantallas grandes */
   height: 64px;
   display: flex;
   align-items: center;
   justify-content: space-between; /* Alinea los elementos a los extremos */
   background-color: #f8f8f8;
   padding: 0 20px;
+  box-sizing: border-box; /* Incluir padding y borde en el ancho total */
 }
 
+/* Botón de regreso */
 .backButton {
   display: flex;
   align-items: center;
@@ -24,8 +27,9 @@
   font-size: 20px;
 }
 
+/* Botón de editar */
 .editButton {
-  background-color: #a21000; /* Rojo para el botón del link */
+  background-color: #a21000; /* Rojo para el botón */
   color: #fff;
   padding: 8px 12px;
   border-radius: 4px;
@@ -39,17 +43,65 @@
 }
 
 /* Responsividad */
-@media (max-width: 768px) {
+
+/* Para pantallas medianas (tabletas en modo vertical) */
+@media (max-width: 992px) {
   .subheader {
-    width: 100%;
-    height: 50px;
+    height: 55px; /* Ajustar altura */
+    padding: 0 15px; /* Reducir el padding lateral */
   }
 
   .backButton {
-    font-size: 14px;
+    font-size: 15px; /* Ajustar tamaño de fuente */
   }
 
   .backButton .arrow {
-    font-size: 18px;
+    font-size: 18px; /* Ajustar tamaño del ícono */
+  }
+
+  .editButton {
+    font-size: 0.8125rem; /* Ajustar tamaño de fuente del botón */
+  }
+}
+
+/* Para pantallas pequeñas (teléfonos móviles) */
+@media (max-width: 768px) {
+  .subheader {
+    height: 50px;
+    padding: 0 10px; /* Reducir padding lateral */
+  }
+
+  .backButton {
+    font-size: 14px; /* Ajustar tamaño de fuente */
+  }
+
+  .backButton .arrow {
+    font-size: 16px; /* Ajustar tamaño del ícono */
+  }
+
+  .editButton {
+    font-size: 0.75rem; /* Ajustar tamaño de fuente del botón */
+    padding: 6px 10px; /* Ajustar padding del botón */
+  }
+}
+
+/* Para pantallas muy pequeñas (teléfonos móviles en modo retrato) */
+@media (max-width: 576px) {
+  .subheader {
+    height: 45px; /* Ajustar altura */
+    padding: 0 5px; /* Reducir padding lateral */
+  }
+
+  .backButton {
+    font-size: 13px; /* Ajustar tamaño de fuente */
+  }
+
+  .backButton .arrow {
+    font-size: 14px; /* Ajustar tamaño del ícono */
+  }
+
+  .editButton {
+    font-size: 0.6875rem; /* Ajustar tamaño de fuente del botón */
+    padding: 5px 8px; /* Ajustar padding del botón */
   }
 }
