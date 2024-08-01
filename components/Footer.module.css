@@ -1,0 +1,54 @@
+/* styles/Footer.module.css */
+.footer {
+  background-color: #333; /* Fondo oscuro para el footer */
+  color: #f9f9f9; /* Color de texto claro */
+  padding: 30px;
+  text-align: center;
+  border-top: 1px solid #444; /* Línea superior en color gris oscuro */
+}
+
+.footerText {
+  font-size: 1rem;
+  color: #f9f9f9; /* Color claro para el texto */
+  margin-bottom: 20px;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espaciado entre los enlaces */
+  flex-wrap: wrap; /* Permite que los enlaces se envuelvan en pantallas más pequeñas */
+}
+
+.footerLink {
+  color: #e4e4e4; /* Rojo vibrante para los enlaces */
+  text-decoration: none;
+  font-weight: bold; /* Texto en negrita para destacar */
+}
+
+.footerLink:hover {
+  text-decoration: underline;
+  color: #ffffff; /* Rojo oscuro al pasar el ratón */
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+  .footer {
+    padding: 40px;
+  }
+
+  .footerText {
+    font-size: 1.125rem;
+  }
+
+  .footerLink {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,102 @@
+/* styles/Home.module.css */
+.container {
+  max-width: 80%; /* Ajustar para que el contenedor sea más ancho */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #ffffff; /* Fondo blanco para destacar el contenido */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  /* Mantener la fluidez y responsividad */
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333; /* Color de texto más oscuro para mayor contraste */
+}
+
+.description {
+  font-size: 1.125rem;
+  color: #333; /* Color negro para mayor legibilidad */
+  margin-bottom: 30px;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.featureList li {
+  font-size: 1.125rem;
+  color: #333; /* Color negro para los elementos de la lista */
+  max-width: 600px; /* Ancho máximo para evitar líneas demasiado largas */
+}
+
+.callToAction {
+  margin-top: 40px;
+}
+
+.callToAction h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333; /* Color negro para el encabezado de llamada a la acción */
+  margin-bottom: 15px;
+}
+
+.callToAction p {
+  font-size: 1.125rem;
+  color: #333; /* Color negro para el texto */
+}
+
+.link {
+  color: #d32f2f; /* Rojo para los enlaces */
+  text-decoration: none;
+  font-weight: bold; /* Texto en negrita para destacar */
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: #a60000; /* Rojo oscuro al pasar el ratón */
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+  .container {
+    max-width: 90%; /* Aumenta el ancho máximo en pantallas más grandes */
+    padding: 30px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1.25rem;
+  }
+
+  .featureList li {
+    font-size: 1.25rem;
+  }
+
+  .callToAction h2 {
+    font-size: 1.75rem;
+  }
+
+  .callToAction p {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px; /* Ancho máximo más grande para pantallas muy grandes */
+  }
+}

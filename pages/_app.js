@@ -3,7 +3,7 @@ import "@/styles/globals.css";
 // pages/_app.js
 import Navbar from "../components/Navbar.js";
 import Subheader from "@/components/SubHeader.js";
-
+import Footer from "@/components/Footer.js";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -13,6 +13,8 @@ function MyApp({ Component, pageProps }) {
       <main>
         <Component {...pageProps} />
       </main>
+      <Footer/>
+
       
     </>
   )
